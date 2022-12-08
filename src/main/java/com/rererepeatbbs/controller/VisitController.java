@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api/v1/visits")
@@ -36,7 +36,8 @@ public class VisitController {
 
     @GetMapping("/users/{id}")
     public Response<List<VisitResponse>> getUserVisitInfo(@PathVariable Long id){
-        return Response.success("");
+        List<VisitResponse> vl = new ArrayList<>();
+        return Response.success(vl);
     }
 
     @GetMapping("/hospitals/{id}")

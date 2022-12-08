@@ -1,11 +1,7 @@
 package com.rererepeatbbs.domain.entity;
 
 import com.rererepeatbbs.domain.dto.VisitResponse;
-import com.rererepeatbbs.service.VisitService;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -14,6 +10,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 public class Visit extends BaseEntity{
 
     @Id
